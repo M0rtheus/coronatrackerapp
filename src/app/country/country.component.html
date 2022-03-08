@@ -1,0 +1,23 @@
+<style>
+    p {text-align: center;}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" style="color:white;">{{country.country}} </a>
+    <a class="navbar-brand" style="color:white;">{{country.province}} </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"></li>
+     </ul>
+    </div>
+  </nav>
+
+<h3>Latest total: {{country.latestTotal}}</h3>
+<h3>New cases today ({{dates[this.dates.length - 1]}}): {{country.deltaFromPrevDay}}</h3>
+
+
+<div echarts [options]="options" class="demo-chart"></div>
+<p>Each day shows the sum of total cases reported</p>
